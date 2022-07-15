@@ -1,45 +1,17 @@
 @extends('components.layout')
+@include('partials._hero')
+@include('partials._search')
+
 
 @section('content')
-    <div class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4">
+    <div class="mx-4 gap-4 space-y-4 md:space-y-0 lg:grid lg:grid-cols-2">
 
         @unless(count($players) == 0)
             @foreach ($players as $player)
-                <div class="bg-gray-50 border border-gray-200 rounded p-6">
-                    <div class="flex">
-                        <img class="hidden w-48 mr-6 md:block" src="{{ asset('images/htafc.png') }}" alt="" />
-                        <div>
-                            <h3 class="text-2xl">
-                                <a href="/players/{{ $player->id }}">{{ $player->firstname }} {{ $player->surname }}</a>
-                            </h3>
-                            <div class="text-xl font-bold mb-4">{{ $player->position }}</div>
-                            <div class="text-xl font-bold mb-4">{{ $player->appearances }}</div>
-                            <div class="text-xl font-bold mb-4">{{ $player->goals }}</div>
-                            {{-- <ul class="flex">
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs">
-                                    <a href="#">Laravel</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs">
-                                    <a href="#">API</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs">
-                                    <a href="#">Backend</a>
-                                </li>
-                                <li
-                                    class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs">
-                                    <a href="#">Vue</a>
-                                </li>
-                            </ul> --}}
-
-                        </div>
-                    </div>
-                </div>
+                <x-player-card :player=$player />
             @endforeach
         @else
-            <p>No players</p>
+            <p>No players found!</p>
         @endunless
     </div>
 @endsection
