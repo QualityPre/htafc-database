@@ -10,7 +10,7 @@ class PlayerController extends Controller
     public function index()
     {
         return view('players.index', [
-            'players' => Player::all()
+            'players' => Player::latest()->filter(request(['tag', 'search']))->get()
         ]);
     }
     public function show(Player $player)

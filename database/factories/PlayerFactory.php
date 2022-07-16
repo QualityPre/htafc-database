@@ -17,11 +17,11 @@ class PlayerFactory extends Factory
     public function definition()
     {
         return [
-            'firstname' => $this->faker->firstNameMale(),
-            'surname' => 'Smith',
+            'name' => $this->faker->name('male'),
             'appearances' => $this->faker->numberBetween(1, 505),
             'goals' => $this->faker->numberBetween(1, 255),
             'position' => 'Midfield',
+            'tags' => '2000-01,2001-02,2002-03',
             'wikipedia_link' => $this->faker->url(),
             'description' => $this->faker->paragraph(5),
         ];

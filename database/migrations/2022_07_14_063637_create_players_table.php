@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
-            $table->string('firstname');
-            $table->string('surname');
+            $table->string('name');
             $table->string('appearances');
             $table->string('goals');
             $table->string('position');
+            $table->string('tags');
             // $table->string('photo');
             $table->string('wikipedia_link');
             $table->longText('description');

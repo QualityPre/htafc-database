@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Player extends Model
 {
     use HasFactory;
+
+    public function scopeFilter($query, array $filters)
+    {
+        if ($filters['tag'] ?? false) {
+            $query->where('tags', 'like', '%' . request('tag') . '%');
+        }
+
+        if ($filters['search'] ?? false) {
+            $query->where('tags', 'like', '%' . request('search') . '%')->orWhere('name', 'like', '%' . request('search') . '%');
+        }
+    }
 }
