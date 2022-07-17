@@ -20,8 +20,9 @@ class PlayerFactory extends Factory
             'name' => $this->faker->name('male'),
             'appearances' => $this->faker->numberBetween(1, 505),
             'goals' => $this->faker->numberBetween(1, 255),
-            'position' => 'Midfield',
-            'tags' => '2000-01,2001-02,2002-03',
+            'position_general' => 'Midfield',
+            'tags_seasons' => '2000-01,2001-02,2002-03',
+            'tags_positions' => 'WG, AM, CM',
             'wikipedia_link' => $this->faker->url(),
             'description' => $this->faker->paragraph(5),
         ];

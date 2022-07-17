@@ -17,3 +17,5 @@ use App\Http\Controllers\PlayerController;
 Route::get('/', [PlayerController::class, 'index']);
 
 Route::get('/players/{player}', [PlayerController::class, 'show']);
+
+Route::get('/players/create', [PlayerController::class, 'create']);

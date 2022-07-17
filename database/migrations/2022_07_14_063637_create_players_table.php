@@ -18,11 +18,12 @@ return new class extends Migration
             $table->string('name');
             $table->string('appearances');
             $table->string('goals');
-            $table->string('position');
-            $table->string('tags');
+            $table->string('position_general');
+            $table->string('tags_seasons');
+            $table->string('tags_positions');
             // $table->string('photo');
             $table->string('wikipedia_link');
-            $table->longText('description');
+            $table->longText('description')->nullable();
 
             $table->timestamps();
         });

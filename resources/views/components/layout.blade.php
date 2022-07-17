@@ -35,7 +35,7 @@
         class="bg-laravel fixed bottom-0 left-0 mt-24 flex h-24 w-full items-center justify-start font-bold text-white opacity-90 md:justify-center">
         <p class="ml-2">Copyright &copy; QualityPre 2022, All Rights reserved</p>
 
-        <a href="create.html" class="absolute top-1/3 right-10 bg-black text-white py-2 px-5">Add player</a>
+        <a href="/listings/create" class="absolute top-1/3 right-10 bg-black text-white py-2 px-5">Add a player</a>
     </footer> --}}
 </body>
 

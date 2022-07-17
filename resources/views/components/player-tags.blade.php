@@ -11,5 +11,4 @@ $tags = explode(',', $tagsCsv);
         </li>
     @endforeach
 
-
 </ul>

@@ -19,4 +19,9 @@ class PlayerController extends Controller
             'player' => $player
         ]);
     }
+
+    public function create()
+    {
+        return view('players.create');
+    }
 }
