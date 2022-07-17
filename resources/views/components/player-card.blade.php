@@ -11,7 +11,9 @@
             <div class="mb-4 text-xl font-bold">Appearances - {{ $player->appearances }}
             </div>
             <div class="mb-4 text-xl font-bold">Goals - {{ $player->goals }}</div>
+            <div class="my-2 text-xl font-bold"> Positions </div>
             <x-player-tags :tagsCsv="$player->tags_positions" />
+            <div class="my-2 text-xl font-bold"> Seasons </div>
             <x-player-tags :tagsCsv="$player->tags_seasons" />
         </div>
     </div>
